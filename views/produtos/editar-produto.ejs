@@ -4,22 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PETSHOP DH</title>
+    <title>Edição de Produto!</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/footer.css" />
     <link rel="stylesheet" href="/stylesheets/header.css" />
+
+    <link rel="stylesheet" href="/stylesheets/edicao-produto.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <%- include("../partials/header") %>
+    <header>
+      <div class="promoções">
+        <h5>
+          Promoção da semana!! Kit 2x 100% Whey 900g (1.8kg) Max Titanium Whey
+          Protein Concentrado de R$1.499 por apenas R$899
+        </h5>
+      </div>
+
+      <div class="cabeçario">
+        <img id="logo" src="/images/logo.oficial.jpeg" alt=" Icone do Site" />
+
+        <div class="pesquisar">
+          <img
+            id="icone-buscar"
+            src="/images/icone-busca.png"
+            alt="icone busca"
+          />
+          <input type="text" name="Pesquisar" placeholder=" Pesquisar" />
+        </div>
+        <ul id="login">
+          <% if(estaLogado) { %>
+          <a href="/login"
+            ><img
+              id="icone-usuario"
+              src="/images/icone-entrar-peq.png"
+              alt="Icone usuario"
+          /></a>
+          <li><a href="/admin"><%= usuarioLogado.nome %></a></li>
+          <li><a href="/logout">Logout</a></li>
+          <% } else { %>
+          <a href="/login"
+            ><img
+              id="icone-usuario"
+              src="/images/icone-usuario-trans.png"
+              alt="Icone usuario"
+          /></a>
+
+          <% } %>
+        </ul>
+        <a href="/carrinho"
+          ><img
+            id="icone-carrinho"
+            src="/images/crrinho-original-pq-trans.png"
+            alt="Icone de um carrinho"
+          />
+        </a>
+      </div>
+
+      <div class="menu-principal">
+        <a id="pagina-inicial" href="/">
+          <li ul>Página Inicial</li>
+        </a>
+        <a id="lista-produtos" href="/listaprodutos">
+          <li ul>Lista de Produtos</li>
+        </a>
+
+        <a id="parceiro" href="/cadastroempresa">
+          <li ul>Seja um Parceiro</li>
+        </a>
+
+        <a id="sobre-empresa" href="#">
+          <li ul>Sobre a Empresa</li>
+        </a>
+      </div>
+    </header>
     <section class="contato">
       <div class="container">
-        <h1>Editar de brand <%= produto.id %></h1>
+        <h1>Editar Produto <%= produto.id %></h1>
 
         <div class="align-row">
           <form method="POST">
-            <label for="usuario_id">Usuario</label>
+            <label for="usuario_id">Usuário</label>
             <input
+              id="usu"
               type="text"
               id="usuario_id"
               name="usuario_id"
@@ -27,14 +101,14 @@
               readonly="“true”"
             />
 
-            <label for="nome">Nome</label>
+            <label for="nome">Produto</label>
             <input
               type="text"
               id="nome"
               name="nome"
               value="<%= produto.nome %>"
             />
-
+            <label for="categoria">Categoria</label>
             <input
               type="text"
               id="categoria"
@@ -44,7 +118,7 @@
               disabled
             />
 
-            <label for="descricao">descricao</label>
+            <label for="descricao">Descrição</label>
             <textarea name="descricao" id="descricao" required>
 <%= produto.descricao %></textarea
             >
@@ -63,6 +137,35 @@
       </div>
     </section>
 
-    <%- include("../partials/footer") %>
+    <footer>
+      <section class="geral">
+        <div class="parte-texto-um">
+          Ganhe pontos <br />
+          em Compra!
+        </div>
+        <img id="gpoints" src="/images/gpoints.jpg" alt="" />
+
+        <div class="parte-texto-dois">
+          <img id="logo-footer" src="/images/logo.oficial.jpeg" alt="" />
+          <h1>O melhor site de Suplementos!</h1>
+          <br />
+          <h3>
+            Tenha segurança em sua compra com o <br />
+            melhor site de suplementos do Brasil.
+          </h3>
+          <h5>Monstro Suplementos - Todos os direitos reservados</h5>
+        </div>
+
+        <div class="parte-texto-tres">
+          <h1>Conecte conosco!</h1>
+
+          <div class="imagens-footer">
+            <img id="footer-face" src="/images/facebook.png" alt="" />
+            <img id="footer-git" src="/images/github.png" alt="" />
+            <img id="footer-insta" src="/images/instagram-icone.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

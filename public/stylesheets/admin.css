@@ -1,8 +1,45 @@
-body{
-    height: 100px;
-    margin: 0px ;
+:root {
+  --vinho: #cb3737;
+  --preto: #1a1515;
+  --cinza: #dedddd;
+  --branco: #fff5ec;
+  --vinho-h: #b83232;
 }
 
-main{
-    height: 130vh;
+body {
+  height: 100px;
+  margin: 0px;
+}
+
+main {
+  width: 100%;
+  background-color: var(--cinza);
+}
+
+.tabela button {
+  margin-left: 100px;
+
+  color: var(--branco);
+  background-color: var(--vinho);
+  border: transparent;
+  border-radius: 5px;
+  width: 300px;
+  height: 50px;
+  margin-top: 150px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#meus-produtos a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+#meus-produtos a:hover {
+  color: var(--preto);
+}
+
+.tabela button:hover {
+  color: var(--preto);
 }

@@ -1,0 +1,70 @@
+:root {
+  --vinho: #cb3737;
+  --preto: #1a1515;
+  --cinza: #dedddd;
+  --branco: #fff5ec;
+  --vinho-h: #b83232;
+}
+
+.contato {
+  background-color: var(--cinza);
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--preto);
+  height: 400px;
+  width: 50%;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 20px;
+  font-family: "Poppins";
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.align-row label {
+  margin-right: 20px;
+}
+
+.align-row input {
+  width: 100px;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+#usu {
+  width: 300px;
+  margin-right: 100px;
+}
+
+.align-row button {
+  width: 100px;
+  background-color: var(--vinho);
+  color: var(--branco);
+  font-size: 18px;
+  font-family: "Poppins";
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.align-row button:hover {
+  background-color: var(--vinho-h);
+}
+
+.container h1 {
+  margin-top: 30px;
+}

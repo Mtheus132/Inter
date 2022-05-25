@@ -1,0 +1,58 @@
+:root {
+  --vinho: #cb3737;
+  --preto: #1a1515;
+  --cinza: #dedddd;
+  --branco: #fff5ec;
+  --vinho-h: #b83232;
+}
+
+main {
+  background-color: var(--cinza);
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  background-color: var(--preto);
+  height: 600px;
+  width: 70%;
+  color: var(--branco);
+  margin-top: 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.table a {
+  color: var(--branco);
+  margin-right: 10px;
+  font-family: "Poppins";
+}
+
+.table a:hover {
+  color: var(--vinho);
+}
+
+#corpo {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+}
+.novo {
+  background-color: var(--vinho);
+  height: 50px;
+  border-radius: 5px;
+  border: transparent;
+  margin-top: 600px;
+  margin-left: 30px;
+}
+
+.novo a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.novo:hover {
+  background-color: var(--vinho-h);
+}

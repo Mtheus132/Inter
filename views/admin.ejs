@@ -1,26 +1,27 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheets/admin.css">
-    <link rel="stylesheet" href="stylesheets/header.css">
-    <link rel="stylesheet" href="stylesheets/footer.css">
-    <link rel="stylesheet" href="stylesheets/style.css">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parceiro!</title>
+    <link rel="stylesheet" href="stylesheets/admin.css" />
+    <link rel="stylesheet" href="stylesheets/header.css" />
+    <link rel="stylesheet" href="stylesheets/footer.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
 
-</head>
-<body>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <%- include("./partials/header") %>
     <main>
-        <section id="tabela">
-            <button><a href="/admin/produtos">Ver Produtos</a></button>
-            <button href="/categorias">Ver categorias</button>
-            <button href="/">ver produto over</button>
-
-        </section>
-        
+      <section class="tabela">
+        <button id="meus-produtos">
+          <a href="/admin/produtos">Meus Produtos</a>
+        </button>
+        <button href="/categorias">Minhas Categorias</button>
+        <button href="/">Detalhes</button>
+      </section>
     </main>
     <%- include("./partials/footer") %>
-</body>
+  </body>
 </html>

@@ -1,15 +1,60 @@
-body{
-    margin: 0%;
-    height: auto;
+:root {
+  --vinho: #cb3737;
+  --preto: #1a1515;
+  --cinza: #dedddd;
+  --branco: #fff5ec;
 }
 
-main{
-    margin: 0%;
-    height: 80vh;
-
+body {
+  margin: 0%;
+  height: auto;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin: 0%;
+  height: 600px;
+  background-color: var(--cinza);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  background-color: var(--preto);
+  border-radius: 10px;
+}
+
+.container h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.align-row {
+  color: var(--branco);
+  font-family: "Poppins";
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px;
+}
+
+#enviar {
+  margin-top: 50px;
+  width: 180px;
+  height: 40px;
+
+  background-color: var(--vinho);
+  color: var(--branco);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+
+  font-size: 16px;
+  margin-left: 250px;
 }
